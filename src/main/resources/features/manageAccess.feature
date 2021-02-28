@@ -10,9 +10,9 @@ Feature: Manage Access
     Then I should see the "Home" page
     And I click "Manage Access" link
     Then I enter the following values in the following fields
-      | First Name | Will                 |
-      | Last Name  | Smith                |
-      | E-mail     | will.smith@gmail.com |
+      | First Name | Will                |
+      | Last Name  | Smith               |
+      | E-mail     | new.smith@gmail.com |
     And I choose "Instructor" from dropdown "Role"
     And I choose "10" from dropdown "Batch"
     And I click "Add User" button
@@ -23,20 +23,20 @@ Feature: Manage Access
       | E-mail     | admin@yahoo.com |
       | Role       | Mentor          |
       | Batch      | N/A             |
-    And I click "Action" button of user "will.smith@gmail.com"
+    And I click "Action" button of user "new.smith@gmail.com"
     And I click "Edit" button
     Then I edit the user with following
-      | Email | will.smith.new@gmail.com |
-      | Role  | Mentor                   |
-      | Batch | N/A                      |
+      | Email | new1.smith@gmail.com |
+      | Role  | Mentor               |
+      | Batch | N/A                  |
     Then I click "Update User" button
     Then verify the following user exists in the table
-      | First Name | Will                     |
-      | Last Name  | Smith                    |
-      | E-mail     | will.smith.new@gmail.com |
-      | Role       | Mentor                   |
-      | Batch      | N/A                      |
-    And I click "Action" button of user "will.smith.new@gmail.com"
+      | First Name | Will                 |
+      | Last Name  | Smith                |
+      | E-mail     | new1.smith@gmail.com |
+      | Role       | Mentor               |
+      | Batch      | N/A                  |
+    And I click "Action" button of user "new1.smith@gmail.com"
     Then I click "Delete" button
     And I click "Delete" button in "User Delete Window"
     Then verify the following user does NOT exist in the table
