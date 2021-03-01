@@ -16,7 +16,7 @@ public class EncryptionUtils {
     }
 
     public static void main(String[] args) {
-       String encryptedPass = encrypt("03e05b3f-f630-4e4d-acee-454122a6dd72");
+       String encryptedPass = encrypt("");
         System.out.println("encrypted: " + encryptedPass);
 
         String decryption = decrypt(encryptedPass);
