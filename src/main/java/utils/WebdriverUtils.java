@@ -12,8 +12,8 @@ import java.util.concurrent.TimeUnit;
 
 public class WebdriverUtils {
 
-    private static String sauceUser = LocalConfigUtils.getProperty("sauceUser");
-    private static String sauceKey = LocalConfigUtils.getProperty("sauceKey");
+    private static String sauceUser = EncryptionUtils.decrypt(LocalConfigUtils.getProperty("sauceUser"));
+    private static String sauceKey = EncryptionUtils.decrypt(LocalConfigUtils.getProperty("sauceKey"));
     private static String URL = "https://" + sauceUser + ":" + sauceKey + "@ondemand.us-west-1.saucelabs.com:443/wd/hub";
 
 
